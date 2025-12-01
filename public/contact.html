@@ -1,102 +1,89 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - ELGANEXT</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <canvas id="network-canvas"></canvas>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <h1>ELGANEXT</h1>
-                <span class="subtitle">by Bevans</span>
-            </div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="home.html">Inicio</a></li>
-                <li><a href="about.html">Nosotros</a></li>
-                <li><a href="products.html">Servicios</a></li>
-                <li><a href="contact.html" class="active">Contacto</a></li>
-                <li id="auth-menu-item"><a href="auth.html">Login/Registro</a></li>
-                <li id="chat-menu-item" style="display:none;"><a href="chat.html">Asistente IA</a></li>
-            </ul>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <h1>ELGANEXT</h1>
+            <span class="subtitle">by Bevans</span>
         </div>
-    </nav>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="products.html">Servicios</a></li>
+            <li><a href="contact.html" class="active">Contacto</a></li>
+            <li id="auth-menu-item"><a href="auth.html">Login/Registro</a></li>
+            <li id="chat-menu-item" style="display:none;"><a href="chat.html">Asistente IA</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <section class="contact-page">
-        <div class="container">
-            <h1 class="page-title">Contáctanos</h1>
-            <p class="page-subtitle">Estamos aquí para ayudarte</p>
+<section class="contact-page">
+    <div class="container">
+        <h1 class="page-title">Contáctanos</h1>
+        <p class="page-subtitle">Estamos aquí para ayudarte</p>
 
-            <div class="contact-content">
-                <div class="contact-form-container">
-                    <form id="contactForm" onsubmit="submitContact(event)">
-                        <div class="form-group">
-                            <label for="contact-name">Nombre completo</label>
-                            <input type="text" id="contact-name" required placeholder="Tu nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-email">Email</label>
-                            <input type="email" id="contact-email" required placeholder="tu@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-subject">Asunto</label>
-                            <input type="text" id="contact-subject" required placeholder="Asunto de tu mensaje">
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-message">Mensaje</label>
-                            <textarea id="contact-message" required placeholder="Escribe tu mensaje aquí..."
-                                rows="6"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                    </form>
-                    <div id="contact-success" class="success-message" style="display:none;">
-                        ✓ ¡Mensaje enviado exitosamente! Te responderemos pronto.
+        <div class="contact-content">
+            <div class="contact-form-container">
+                <form id="contactForm" onsubmit="submitContact(event)">
+                    <div class="form-group">
+                        <label for="contact-name">Nombre completo</label>
+                        <input type="text" id="contact-name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Asunto</label>
+                        <input type="text" id="contact-subject" required placeholder="Asunto de tu mensaje">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Mensaje</label>
+                        <textarea id="contact-message" required placeholder="Escribe tu mensaje aquí..."
+                            rows="6"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+                <div id="contact-success" class="success-message" style="display:none;">
+                    ✓ ¡Mensaje enviado exitosamente! Te responderemos pronto.
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@ELGANEXT.com</p>
                     </div>
                 </div>
-
-                <div class="contact-info">
-                    <h3>Información de Contacto</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@ELGANEXT.com</p>
-                        </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🌐</div>
+                    <div>
+                        <h4>Redes Sociales</h4>
+                        <p>@ELGANEXT</p>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🌐</div>
-                        <div>
-                            <h4>Redes Sociales</h4>
-                            <p>@ELGANEXT</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">⏰</div>
-                        <div>
-                            <h4>Horario</h4>
-                            <p>Lun - Vie: 9:00 - 18:00</p>
-                        </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <div>
+                        <h4>Horario</h4>
+                        <p>Lun - Vie: 9:00 - 18:00</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 ELGANEXT by Bevans. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 ELGANEXT by Bevans. Todos los derechos reservados.</p>
+    </div>
+</footer>
 
-    <script src="network.js"></script>
-    <script src="script.js"></script>
+<script src="network.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>

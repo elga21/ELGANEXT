@@ -1,47 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso - ELGANEXT</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <!-- Background -->
-    <canvas id="network-canvas"></canvas>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <h1>ELGANEXT</h1>
-                <span class="subtitle">by Bevans</span>
-            </div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="home.html">Inicio</a></li>
-                <li><a href="auth.html" class="active">Login/Registro</a></li>
-                <li><a href="chat.html">Asistente IA</a></li>
-                <li><a href="products.html">Productos</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <h1>ELGANEXT</h1>
+            <span class="subtitle">by Bevans</span>
         </div>
-    </nav>
-
-    <div class="auth-page">
-        <div class="container" id="auth-container">
-            <h1 id="form-title">LOGIN</h1>
-            <input type="text" id="username" placeholder="Usuario">
-            <input type="password" id="password" placeholder="Contraseña">
-            <button id="auth-btn" onclick="login()">ACCEDER AL SISTEMA</button>
-            <div class="switch-link" onclick="toggleAuth()">¿No tienes cuenta? Regístrate</div>
-        </div>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="auth.html" class="active">Login/Registro</a></li>
+            <li><a href="chat.html">Asistente IA</a></li>
+            <li><a href="products.html">Productos</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
     </div>
+</nav>
 
-    <script src="network.js"></script>
-    <script src="script.js"></script>
+<div class="auth-page">
+    <div class="container" id="auth-container">
+        <h1 id="form-title">LOGIN</h1>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button id="auth-btn" onclick="login()">ACCEDER AL SISTEMA</button>
+        <div class="switch-link" onclick="toggleAuth()">¿No tienes cuenta? Regístrate</div>
+    </div>
+</div>
+
+<script src="network.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
