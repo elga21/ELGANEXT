@@ -15,16 +15,35 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <h1 id="form-title">LOGIN</h1>
-        <input type="text" id="username" placeholder="Usuario">
-        <input type="password" id="password" placeholder="Contraseña">
-        <button id="auth-btn" onclick="login()">ACCEDER AL SISTEMA</button>
-        <div class="switch-link" onclick="toggleAuth()">¿No tienes cuenta? Regístrate</div>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>ELGANEXT</h1>
+                <span class="subtitle">by Bevans</span>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="products.html">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="auth.html" class="active">Login/Registro</a></li>
+                <li><a href="chat.html">Asistente IA</a></li>
+            </ul>
         </div>
-        </div>
+    </nav>
 
-        <script src="network.js"></script>
-        <script src="script.js"></script>
+    <div class="auth-page">
+        <div class="container" id="auth-container">
+            <h1 id="form-title">LOGIN</h1>
+            <input type="text" id="username" placeholder="Usuario">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button id="auth-btn" onclick="login()">ACCEDER AL SISTEMA</button>
+            <div class="switch-link" onclick="toggleAuth()">¿No tienes cuenta? Regístrate</div>
+        </div>
+    </div>
+
+    <script src="network.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
