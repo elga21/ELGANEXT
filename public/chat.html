@@ -1,43 +1,58 @@
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">
-            <h1>ELGANEXT</h1>
-            <span class="subtitle">by Bevans</span>
-        </div>
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="home.html">Inicio</a></li>
-            <li><a href="auth.html">Login/Registro</a></li>
-            <li><a href="chat.html" class="active">Asistente IA</a></li>
-            <li><a href="products.html">Productos</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-        </ul>
-    </div>
-</nav>
+<!DOCTYPE html>
+<html lang="es">
 
-<div class="chat-page">
-    <div class="container" id="chat-container">
-        <h2>ELGANEXT AI</h2>
-        <p class="chat-subtitle">by Bevans</p>
-        <div id="chat-box"></div>
-        <div id="input-area">
-            <input type="text" id="message-input" placeholder="Pregunta lo que quieras..."
-                onkeypress="if(event.key==='Enter')sendMessage()">
-            <button onclick="sendMessage()">ENVIAR</button>
-        </div>
-        <button onclick="logout()" class="btn-logout">CERRAR SESIÓN</button>
-    </div>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <title>Chat IA - ELGANEXT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<script src="network.js"></script>
-<script src="script.js"></script>
-<script>
-    // Check auth
-    if (!localStorage.getItem('token')) {
-        window.location.href = 'auth.html';
-    }
-</script>
+<body>
+    <!-- Background -->
+    <canvas id="network-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>ELGANEXT</h1>
+                <span class="subtitle">by Bevans</span>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="auth.html">Login/Registro</a></li>
+                <li><a href="chat.html" class="active">Asistente IA</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="chat-page">
+        <div class="container" id="chat-container">
+            <h2>ELGANEXT AI</h2>
+            <p class="chat-subtitle">by Bevans</p>
+            <div id="chat-box"></div>
+            <div id="input-area">
+                <input type="text" id="message-input" placeholder="Pregunta lo que quieras..."
+                    onkeypress="if(event.key==='Enter')sendMessage()">
+                <button onclick="sendMessage()">ENVIAR</button>
+            </div>
+            <button onclick="logout()" class="btn-logout">CERRAR SESIÓN</button>
+        </div>
+    </div>
+
+    <script src="network.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Check auth
+        if (!localStorage.getItem('token')) {
+            window.location.href = 'auth.html';
+        }
+    </script>
 </body>
 
 </html>

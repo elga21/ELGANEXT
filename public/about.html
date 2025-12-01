@@ -1,168 +1,181 @@
-<canvas id="network-canvas"></canvas>
+<!DOCTYPE html>
+<html lang="es">
 
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">
-            <h1>ELGANEXT</h1>
-            <span class="subtitle">by Bevans</span>
-        </div>
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="home.html">Inicio</a></li>
-            <li><a href="about.html" class="active">Nosotros</a></li>
-            <li><a href="products.html">Servicios</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-            <li id="auth-menu-item"><a href="auth.html">Login/Registro</a></li>
-            <li id="chat-menu-item" style="display:none;"><a href="chat.html">Asistente IA</a></li>
-        </ul>
-    </div>
-</nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <title>Nosotros - ELGANEXT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about-styles.css">
+</head>
 
-<section class="about-page">
-    <div class="container">
-        <h1 class="page-title">Quiénes <span class="gradient-text">Somos</span></h1>
+<body>
+    <canvas id="network-canvas"></canvas>
 
-        <!-- Introducción -->
-        <div class="about-intro">
-            <p class="intro-text">
-                Somos una organización de programadores de software, prestadora de servicios específicos y a la
-                medida,
-                preparados en múltiples campos de la tecnología. Nos especializamos en transformar ideas en
-                soluciones
-                tecnológicas reales y funcionales.
-            </p>
-        </div>
-
-        <!-- Campos de Especialización -->
-        <div class="expertise-section">
-            <h2 class="section-title">Campos de <span class="gradient-text">Especialización</span></h2>
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <div class="card-icon">🤖</div>
-                    <h3>Inteligencia Artificial</h3>
-                </div>
-                <div class="expertise-card">
-                    <div class="card-icon">📊</div>
-                    <h3>Machine Learning</h3>
-                </div>
-                <div class="expertise-card">
-                    <div class="card-icon">⚡</div>
-                    <h3>Electrónica</h3>
-                </div>
-                <div class="expertise-card">
-                    <div class="card-icon">🦾</div>
-                    <h3>Robótica</h3>
-                </div>
-                <div class="expertise-card">
-                    <div class="card-icon">🏭</div>
-                    <h3>Software Industrial</h3>
-                </div>
-                <div class="expertise-card">
-                    <div class="card-icon">🌐</div>
-                    <h3>Desarrollo Web</h3>
-                </div>
-                <div class="expertise-card">
-                    <div class="card-icon">📱</div>
-                    <h3>Apps Móviles</h3>
-                </div>
-                <div class="expertise-card">
-                    <div class="card-icon">☁️</div>
-                    <h3>Cloud Computing</h3>
-                </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>ELGANEXT</h1>
+                <span class="subtitle">by Bevans</span>
             </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="about.html" class="active">Nosotros</a></li>
+                <li><a href="products.html">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li id="auth-menu-item"><a href="auth.html">Login/Registro</a></li>
+                <li id="chat-menu-item" style="display:none;"><a href="chat.html">Asistente IA</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- Lenguajes de Programación -->
-        <div class="languages-section">
-            <h2 class="section-title">Lenguajes de <span class="gradient-text">Programación</span></h2>
-            <div class="tech-stack">
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">JavaScript</span>
-                <span class="tech-badge">TypeScript</span>
-                <span class="tech-badge">C++</span>
-                <span class="tech-badge">C#</span>
-                <span class="tech-badge">Java</span>
-                <span class="tech-badge">PHP</span>
-                <span class="tech-badge">Go</span>
-                <span class="tech-badge">Rust</span>
-                <span class="tech-badge">SQL</span>
-                <span class="tech-badge">HTML/CSS</span>
-                <span class="tech-badge">Arduino</span>
+    <section class="about-page">
+        <div class="container">
+            <h1 class="page-title">Quiénes <span class="gradient-text">Somos</span></h1>
+
+            <!-- Introducción -->
+            <div class="about-intro">
+                <p class="intro-text">
+                    Somos una organización de programadores de software, prestadora de servicios específicos y a la
+                    medida,
+                    preparados en múltiples campos de la tecnología. Nos especializamos en transformar ideas en
+                    soluciones
+                    tecnológicas reales y funcionales.
+                </p>
             </div>
-        </div>
 
-        <!-- Arquitecturas Tecnológicas -->
-        <div class="architecture-section">
-            <h2 class="section-title">Arquitecturas <span class="gradient-text">Tecnológicas</span></h2>
-
-            <div class="architecture-container">
-                <!-- Arquitectura Web -->
-                <div class="architecture-card">
-                    <h3>Stack Web</h3>
-                    <div class="flow-diagram">
-                        <div class="flow-item">Frontend</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">React / Vue / Angular</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">Backend</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">Node.js / Django / Laravel</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">Base de Datos</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">MySQL / MongoDB / PostgreSQL</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">Cloud / Deploy</div>
+            <!-- Campos de Especialización -->
+            <div class="expertise-section">
+                <h2 class="section-title">Campos de <span class="gradient-text">Especialización</span></h2>
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <div class="card-icon">🤖</div>
+                        <h3>Inteligencia Artificial</h3>
                     </div>
-                </div>
-
-                <!-- Arquitectura Industrial/Robótica -->
-                <div class="architecture-card">
-                    <h3>Stack Industrial & Robótica</h3>
-                    <div class="flow-diagram">
-                        <div class="flow-item">Sensores & Hardware</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">Microcontroladores</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">Arduino / Raspberry Pi / PLC</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">Control & Procesamiento</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">Python / C++ / ROS</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">Machine Learning / IA</div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-item">Actuadores & Output</div>
+                    <div class="expertise-card">
+                        <div class="card-icon">📊</div>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="card-icon">⚡</div>
+                        <h3>Electrónica</h3>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="card-icon">🦾</div>
+                        <h3>Robótica</h3>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="card-icon">🏭</div>
+                        <h3>Software Industrial</h3>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="card-icon">🌐</div>
+                        <h3>Desarrollo Web</h3>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="card-icon">📱</div>
+                        <h3>Apps Móviles</h3>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="card-icon">☁️</div>
+                        <h3>Cloud Computing</h3>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Desarrollador -->
-        <div class="developer-section">
-            <h2 class="section-title">Nuestro <span class="gradient-text">Equipo</span></h2>
-            <div class="developer-card">
-                <div class="card-glow"></div>
-                <div class="developer-image">
-                    <img src="../pit.png" alt="Fernando Bevans"
-                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23328ba8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2260%22 fill=%22white%22%3EFB%3C/text%3E%3C/svg%3E'">
+            <!-- Lenguajes de Programación -->
+            <div class="languages-section">
+                <h2 class="section-title">Lenguajes de <span class="gradient-text">Programación</span></h2>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">TypeScript</span>
+                    <span class="tech-badge">C++</span>
+                    <span class="tech-badge">C#</span>
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">Go</span>
+                    <span class="tech-badge">Rust</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">HTML/CSS</span>
+                    <span class="tech-badge">Arduino</span>
                 </div>
-                <h3>Fernando Bevans</h3>
-                <p class="dev-title">Desarrollador de Sistemas</p>
-                <div class="elganext-badge">ELGANEXT</div>
+            </div>
+
+            <!-- Arquitecturas Tecnológicas -->
+            <div class="architecture-section">
+                <h2 class="section-title">Arquitecturas <span class="gradient-text">Tecnológicas</span></h2>
+
+                <div class="architecture-container">
+                    <!-- Arquitectura Web -->
+                    <div class="architecture-card">
+                        <h3>Stack Web</h3>
+                        <div class="flow-diagram">
+                            <div class="flow-item">Frontend</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">React / Vue / Angular</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">Backend</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">Node.js / Django / Laravel</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">Base de Datos</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">MySQL / MongoDB / PostgreSQL</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">Cloud / Deploy</div>
+                        </div>
+                    </div>
+
+                    <!-- Arquitectura Industrial/Robótica -->
+                    <div class="architecture-card">
+                        <h3>Stack Industrial & Robótica</h3>
+                        <div class="flow-diagram">
+                            <div class="flow-item">Sensores & Hardware</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">Microcontroladores</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">Arduino / Raspberry Pi / PLC</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">Control & Procesamiento</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">Python / C++ / ROS</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">Machine Learning / IA</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item">Actuadores & Output</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desarrollador -->
+            <div class="developer-section">
+                <h2 class="section-title">Nuestro <span class="gradient-text">Equipo</span></h2>
+                <div class="developer-card">
+                    <div class="card-glow"></div>
+                    <div class="developer-image">
+                        <img src="../pit.png" alt="Fernando Bevans"
+                            onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23328ba8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2260%22 fill=%22white%22%3EFB%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <h3>Fernando Bevans</h3>
+                    <p class="dev-title">Desarrollador de Sistemas</p>
+                    <div class="elganext-badge">ELGANEXT</div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2025 ELGANEXT by Bevans. Todos los derechos reservados.</p>
-    </div>
-</footer>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ELGANEXT by Bevans. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-<script src="network.js"></script>
-<script src="script.js"></script>
+    <script src="network.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

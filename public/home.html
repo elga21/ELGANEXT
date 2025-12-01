@@ -1,93 +1,108 @@
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">
-            <h1>ELGANEXT</h1>
-            <span class="subtitle">by Bevans</span>
-        </div>
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="home.html" class="active">Inicio</a></li>
-            <li><a href="about.html">Nosotros</a></li>
-            <li><a href="products.html">Servicios</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-            <li id="auth-menu-item"><a href="auth.html">Login/Registro</a></li>
-            <li id="chat-menu-item" style="display:none;"><a href="chat.html">Asistente IA</a></li>
-        </ul>
-    </div>
-</nav>
+<!DOCTYPE html>
+<html lang="es">
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <h1 class="hero-title">
-            Bienvenido a <span class="gradient-text">ELGANEXT</span>
-        </h1>
-        <p class="hero-subtitle">El futuro de la inteligencia artificial al alcance de tus manos</p>
-        <div class="hero-buttons">
-            <a href="chat.html" class="btn btn-primary">Probar Asistente IA</a>
-            <a href="products.html" class="btn btn-secondary">Ver Productos</a>
-        </div>
-    </div>
-</section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../logo.png">
+    <title>ELGANEXT - Organización Tecnológica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<!-- Features Section -->
-<section class="features">
-    <div class="container">
-        <h2 class="section-title">Características Principales</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🤖</div>
-                <h3>Asistente IA Avanzado</h3>
-                <p>Conversa con nuestro asistente impulsado por tecnología de última generación</p>
+<body>
+    <!-- Interactive Node Network Background -->
+    <canvas id="network-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>ELGANEXT</h1>
+                <span class="subtitle">by Bevans</span>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔒</div>
-                <h3>Seguridad Total</h3>
-                <p>Tus datos protegidos con encriptación de nivel empresarial</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <h3>Respuestas Instantáneas</h3>
-                <p>Obtén respuestas precisas en milisegundos</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📱</div>
-                <h3>100% Responsive</h3>
-                <p>Accede desde cualquier dispositivo, en cualquier lugar</p>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html" class="active">Inicio</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="products.html">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li id="auth-menu-item"><a href="auth.html">Login/Registro</a></li>
+                <li id="chat-menu-item" style="display:none;"><a href="chat.html">Asistente IA</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Bienvenido a <span class="gradient-text">ELGANEXT</span>
+            </h1>
+            <p class="hero-subtitle">El futuro de la inteligencia artificial al alcance de tus manos</p>
+            <div class="hero-buttons">
+                <a href="chat.html" class="btn btn-primary">Probar Asistente IA</a>
+                <a href="products.html" class="btn btn-secondary">Ver Productos</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- About Section -->
-<section class="about">
-    <div class="container">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>Sobre ELGANEXT</h2>
-                <p>ELGANEXT es más que un asistente virtual. Es tu compañero de innovación, diseñado para ayudarte a
-                    resolver problemas complejos, encontrar información precisa y optimizar tus procesos diarios.
-                </p>
-                <p>Desarrollado por Bevans, combinamos diseño futurista con funcionalidad de vanguardia.</p>
-                <a href="contact.html" class="btn btn-primary">Contáctanos</a>
-            </div>
-            <div class="about-image">
-                <div class="pulse-circle"></div>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Características Principales</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Asistente IA Avanzado</h3>
+                    <p>Conversa con nuestro asistente impulsado por tecnología de última generación</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Seguridad Total</h3>
+                    <p>Tus datos protegidos con encriptación de nivel empresarial</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Respuestas Instantáneas</h3>
+                    <p>Obtén respuestas precisas en milisegundos</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>100% Responsive</h3>
+                    <p>Accede desde cualquier dispositivo, en cualquier lugar</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2025 ELGANEXT by Bevans. Todos los derechos reservados.</p>
-    </div>
-</footer>
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre ELGANEXT</h2>
+                    <p>ELGANEXT es más que un asistente virtual. Es tu compañero de innovación, diseñado para ayudarte a
+                        resolver problemas complejos, encontrar información precisa y optimizar tus procesos diarios.
+                    </p>
+                    <p>Desarrollado por Bevans, combinamos diseño futurista con funcionalidad de vanguardia.</p>
+                    <a href="contact.html" class="btn btn-primary">Contáctanos</a>
+                </div>
+                <div class="about-image">
+                    <div class="pulse-circle"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="network.js"></script>
-<script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ELGANEXT by Bevans. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="network.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
