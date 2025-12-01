@@ -1,0 +1,23 @@
+{
+    "name": "elganext-website",
+    "version": "1.0.0",
+    "description": "ELGANEXT - Organización Tecnológica",
+    "main": "server.js",
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "@google/generative-ai": "^0.21.0",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.20.2",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.0",
+        "twilio": "^5.10.6",
+        "xlsx": "^0.18.5"
+    }
+}
