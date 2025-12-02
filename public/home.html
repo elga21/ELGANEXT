@@ -73,11 +73,10 @@
                 </div>
             </div>
         </div>
-    </section>
 
     <div id="elganext-promo-banner">
+    <span class="close-btn" onclick="document.getElementById('elganext-promo-banner').style.display='none'">&times;</span>
     <div class="banner-content">
-        <span class="close-btn" onclick="document.getElementById('elganext-promo-banner').style.display='none'">&times;</span>
         <p class="main-message">
             🚀 **¡OFERTAS FIN DE AÑO ELGANEXT!** 🚀
         </p>
@@ -85,9 +84,9 @@
             **20% OFF** Emprendimientos | **10% OFF** Proyectos Empresariales
         </p>
         <p class="small-text">
-            *Pregúntanos también por tarjetas digitales y webs sencillas para emprendedores.
+            *También: Tarjetas Digitales, Publicidad Digital, Webs Sencillas.
         </p>
-        <a href="#contacto" class="cta-button">¡Quiero mi Descuento!</a>
+        <a href="contact.html" class="cta-button">¡Quiero mi Descuento!</a>
     </div>
 </div>
 
@@ -95,24 +94,28 @@
     /* Estilos del Banner Flotante */
     #elganext-promo-banner {
         position: fixed;
-        bottom: 20px; /* Posiciona en la parte inferior */
-        right: 20px; /* Posiciona a la derecha */
-        z-index: 1000; /* Asegura que esté por encima de otros elementos */
-        background-color: #00bcd4; /* Color azul cian del logo de ELGANEXT */
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        /* Fondo #155859 con una opacidad de 0.8 (50% transparente sería 0.5, ajustado a "casi transparente") */
+        background-color: rgba(21, 88, 89, 0.8); 
         color: white;
-        padding: 15px 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        max-width: 300px;
+        padding: 12px 15px; /* Reducido para hacerlo más pequeño */
+        border-radius: 6px; /* Bordes más pequeños */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        max-width: 200px; /* Tamaño máximo reducido (aprox 40% más pequeño que 300px) */
         font-family: Arial, sans-serif;
-        animation: pulse 1.5s infinite; /* Animación llamativa */
+        font-size: 0.9em; /* Reducir tamaño de fuente general */
+        /* Animación inicial de entrada */
+        opacity: 0;
+        transform: scale(0.8);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     }
 
-    /* Animación de Pulso */
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.02); }
-        100% { transform: scale(1); }
+    /* Clase que se añade al cargar para mostrar la animación */
+    #elganext-promo-banner.show {
+        opacity: 1;
+        transform: scale(1);
     }
 
     .banner-content {
@@ -121,71 +124,82 @@
     }
 
     .main-message {
-        font-size: 1.2em;
+        font-size: 1em;
         font-weight: bold;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
     }
 
     .details {
-        font-size: 1em;
-        margin-bottom: 10px;
-        padding: 5px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        font-size: 0.9em;
+        margin-bottom: 8px;
+        padding: 3px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     .small-text {
-        font-size: 0.8em;
-        opacity: 0.8;
-        margin-bottom: 15px;
+        font-size: 0.7em;
+        opacity: 0.9;
+        margin-bottom: 10px;
     }
 
     .cta-button {
         display: inline-block;
-        background-color: #ff4081; /* Color de acento llamativo (ej. magenta) */
+        background-color: #ff4081; 
         color: white;
-        padding: 8px 15px;
+        padding: 6px 12px;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 4px;
         font-weight: bold;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s, transform 0.1s;
     }
 
     .cta-button:hover {
         background-color: #e91e63;
+        transform: scale(1.05); /* Pequeña animación al pasar el ratón */
     }
 
+    /* Estilos para el botón de cerrar (X) */
     .close-btn {
         position: absolute;
-        top: -10px;
-        right: -10px;
+        top: -8px;
+        right: -8px;
         color: white;
-        background-color: #00798c; /* Un tono más oscuro del azul */
+        background-color: #d32f2f; /* Rojo intenso para resaltar la 'X' */
         border-radius: 50%;
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
         text-align: center;
-        font-size: 1.2em;
+        font-size: 1em;
         cursor: pointer;
         font-weight: bold;
+        transition: background-color 0.2s, transform 0.2s;
+    }
+
+    /* Animación de Resaltado para la 'X' */
+    .close-btn:hover {
+        background-color: #ff4081; /* Cambia a un color llamativo al pasar el ratón */
+        transform: scale(1.2) rotate(5deg); /* Aumenta el tamaño y rota ligeramente */
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
     }
 </style>
 
 <script>
-    // Script simple para hacer la animación inicial (opcional: asegura que el banner aparezca con un fade-in)
+    // JavaScript para aplicar la animación de entrada al cargar la página
     document.addEventListener('DOMContentLoaded', function() {
         const banner = document.getElementById('elganext-promo-banner');
-        if (banner) {
-            banner.style.opacity = '0';
-            setTimeout(() => {
-                banner.style.transition = 'opacity 0.5s ease-in';
-                banner.style.opacity = '1';
-            }, 100);
-        }
+        
+        // Espera un momento para asegurar que el CSS inicial se ha cargado antes de aplicar la clase 'show'
+        setTimeout(() => {
+            banner.classList.add('show');
+        }, 100);
     });
 </script>
+        
+    </section>
 
+   
     <!-- About Section -->
     <section class="about">
         <div class="container">
