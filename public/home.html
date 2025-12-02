@@ -75,16 +75,127 @@
         </div>
     </section>
 
+    <div id="elganext-promo-banner">
+    <div class="banner-content">
+        <span class="close-btn" onclick="document.getElementById('elganext-promo-banner').style.display='none'">&times;</span>
+        <p class="main-message">
+            🚀 **¡OFERTAS FIN DE AÑO ELGANEXT!** 🚀
+        </p>
+        <p class="details">
+            **20% OFF** Emprendimientos | **10% OFF** Proyectos Empresariales
+        </p>
+        <p class="small-text">
+            *Pregúntanos también por tarjetas digitales y webs sencillas para emprendedores.
+        </p>
+        <a href="#contacto" class="cta-button">¡Quiero mi Descuento!</a>
+    </div>
+</div>
+
+<style>
+    /* Estilos del Banner Flotante */
+    #elganext-promo-banner {
+        position: fixed;
+        bottom: 20px; /* Posiciona en la parte inferior */
+        right: 20px; /* Posiciona a la derecha */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        background-color: #00bcd4; /* Color azul cian del logo de ELGANEXT */
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        max-width: 300px;
+        font-family: Arial, sans-serif;
+        animation: pulse 1.5s infinite; /* Animación llamativa */
+    }
+
+    /* Animación de Pulso */
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+    }
+
+    .banner-content {
+        text-align: center;
+        position: relative;
+    }
+
+    .main-message {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .details {
+        font-size: 1em;
+        margin-bottom: 10px;
+        padding: 5px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .small-text {
+        font-size: 0.8em;
+        opacity: 0.8;
+        margin-bottom: 15px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background-color: #ff4081; /* Color de acento llamativo (ej. magenta) */
+        color: white;
+        padding: 8px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+        background-color: #e91e63;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        color: white;
+        background-color: #00798c; /* Un tono más oscuro del azul */
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        font-size: 1.2em;
+        cursor: pointer;
+        font-weight: bold;
+    }
+</style>
+
+<script>
+    // Script simple para hacer la animación inicial (opcional: asegura que el banner aparezca con un fade-in)
+    document.addEventListener('DOMContentLoaded', function() {
+        const banner = document.getElementById('elganext-promo-banner');
+        if (banner) {
+            banner.style.opacity = '0';
+            setTimeout(() => {
+                banner.style.transition = 'opacity 0.5s ease-in';
+                banner.style.opacity = '1';
+            }, 100);
+        }
+    });
+</script>
+
     <!-- About Section -->
     <section class="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Sobre ELGANEXT</h2>
+                    <h2>Sobre ELGANEXT IA</h2>
                     <p>ELGANEXT es más que un asistente virtual. Es tu compañero de innovación, diseñado para ayudarte a
                         resolver problemas complejos, encontrar información precisa y optimizar tus procesos diarios.
                     </p>
-                    <p>Desarrollado por Bevans, combinamos diseño futurista con funcionalidad de vanguardia.</p>
+                    <p>Desarrollado por Bevans sotf, combinamos diseño futurista con funcionalidad de vanguardia.</p>
                     <a href="contact.html" class="btn btn-primary">Contáctanos</a>
                 </div>
                 <div class="about-image">
