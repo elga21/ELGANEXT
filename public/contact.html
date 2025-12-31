@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../logo.png">
     <title>Contacto - ELGANEXT</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -36,39 +35,48 @@
             <p class="page-subtitle">Estamos aquí para ayudarte</p>
 
             <div class="contact-content">
-                <div class="contact-form-container">
-                    <form id="contactForm" onsubmit="submitContact(event)">
-                        <div class="form-group">
-                            <label for="contact-name">Nombre completo</label>
-                            <input type="text" id="contact-name" required placeholder="Tu nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-email">Email</label>
-                            <input type="email" id="contact-email" required placeholder="tu@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-subject">Asunto</label>
-                            <input type="text" id="contact-subject" required placeholder="Asunto de tu mensaje">
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-message">Mensaje + Contacto</label>
-                            <textarea id="contact-message" required placeholder="Escribe tu mensaje aquí..."
-                                rows="6"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                    </form>
-                    <div id="contact-success" class="success-message" style="display:none;">
-                        ✓ ¡Mensaje enviado exitosamente! Te responderemos pronto.
+                <div class="whatsapp-contact-container">
+                    <div class="whatsapp-icon">
+                        <svg viewBox="0 0 32 32" width="80" height="80" fill="#25D366">
+                            <path
+                                d="M16 0C7.164 0 0 7.164 0 16c0 2.828.736 5.484 2.024 7.788L0 32l8.396-2.004A15.933 15.933 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.304c-2.548 0-5.032-.72-7.188-2.072l-.516-.308-5.344 1.276 1.42-5.188-.336-.536A13.247 13.247 0 012.696 16c0-7.336 5.968-13.304 13.304-13.304S29.304 8.664 29.304 16 23.336 29.304 16 29.304zm7.308-9.948c-.4-.2-2.368-1.168-2.736-1.3-.368-.132-.636-.2-.904.2-.268.4-1.036 1.3-1.272 1.568-.236.268-.472.3-.872.1-.4-.2-1.688-.62-3.216-1.984-1.188-1.056-1.992-2.36-2.224-2.76-.236-.4-.024-.616.176-.816.18-.18.4-.472.6-.708.2-.236.268-.4.4-.668.132-.268.068-.5-.032-.7-.1-.2-.904-2.176-1.24-2.98-.328-.78-.66-.676-.904-.688-.236-.012-.504-.016-.772-.016s-.704.1-1.072.5c-.368.4-1.404 1.372-1.404 3.348s1.436 3.884 1.636 4.152c.2.268 2.828 4.316 6.852 6.052.956.412 1.704.66 2.288.844.96.304 1.836.26 2.528.156.772-.116 2.368-.968 2.7-1.904.332-.936.332-1.736.232-1.904-.1-.168-.368-.268-.768-.468z" />
+                        </svg>
                     </div>
+                    <h3>Contáctanos por WhatsApp</h3>
+                    <p>¿Tienes alguna pregunta? Estamos aquí para ayudarte. Haz clic en el botón de abajo para comenzar
+                        una conversación con nosotros.</p>
+                    <a href="https://wa.me/573017250231" target="_blank" class="whatsapp-btn">
+                        <svg viewBox="0 0 32 32" width="24" height="24" fill="white">
+                            <path
+                                d="M16 0C7.164 0 0 7.164 0 16c0 2.828.736 5.484 2.024 7.788L0 32l8.396-2.004A15.933 15.933 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.304c-2.548 0-5.032-.72-7.188-2.072l-.516-.308-5.344 1.276 1.42-5.188-.336-.536A13.247 13.247 0 012.696 16c0-7.336 5.968-13.304 13.304-13.304S29.304 8.664 29.304 16 23.336 29.304 16 29.304zm7.308-9.948c-.4-.2-2.368-1.168-2.736-1.3-.368-.132-.636-.2-.904.2-.268.4-1.036 1.3-1.272 1.568-.236.268-.472.3-.872.1-.4-.2-1.688-.62-3.216-1.984-1.188-1.056-1.992-2.36-2.224-2.76-.236-.4-.024-.616.176-.816.18-.18.4-.472.6-.708.2-.236.268-.4.4-.668.132-.268.068-.5-.032-.7-.1-.2-.904-2.176-1.24-2.98-.328-.78-.66-.676-.904-.688-.236-.012-.504-.016-.772-.016s-.704.1-1.072.5c-.368.4-1.404 1.372-1.404 3.348s1.436 3.884 1.636 4.152c.2.268 2.828 4.316 6.852 6.052.956.412 1.704.66 2.288.844.96.304 1.836.26 2.528.156.772-.116 2.368-.968 2.7-1.904.332-.936.332-1.736.232-1.904-.1-.168-.368-.268-.768-.468z" />
+                        </svg>
+                        Abrir WhatsApp
+                    </a>
                 </div>
 
                 <div class="contact-info">
                     <h3>Información de Contacto</h3>
                     <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+57 301 725 0231</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
                         <div class="contact-icon">📧</div>
                         <div>
                             <h4>Email</h4>
                             <p>info@ELGANEXT.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/fernando-bevans-cataño-63a268257" target="_blank"
+                                    style="color: var(--primary-color); text-decoration: none;">Fernando Bevans
+                                    Cataño</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -82,7 +90,7 @@
                         <div class="contact-icon">⏰</div>
                         <div>
                             <h4>Horario</h4>
-                            <p>Lun - Sab: 9:00 - 18:00</p>
+                            <p>Lun - Vie: 9:00 - 18:00</p>
                         </div>
                     </div>
                 </div>
